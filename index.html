@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="full">
+<head>
+	<title>YouTube</title>
+	<meta name="viewport" content="width=device-width, minimumscale=
+1.0, maximum-scale=1.0" />
+<style type="text/css">
+
+/*Special classes*/
+.shadow{
+	-webkit-box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.75);
+}
+.transition {
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.full{
+	height: 100%;
+	width: 100%;
+}
+.invisible{
+	display: none;
+	visibility: hidden;
+}
+
+body{
+	margin: 0;
+	font-family: helvetica;
+	background: #CBD3D8;
+}
+
+#wrapping{
+	height: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+header{
+	height: 100px;
+	width: 100%;
+	background: white;
+	z-index: 3;
+	position: relative;
+}
+header img#logo{
+	height: 50px;
+	margin: 25px 0 0 25px;
+	float: left;
+}
+header input[type="text"]{
+	width: 200px;
+	padding: 15px 30px;
+	margin: 30px 0 0 105px;
+	float: left;
+	background: #F2F7F8;
+	border: 0;
+	outline: 0;
+	color: #999999;
+}
+header div{
+	float: right;
+	margin: 33px 25px 0 0;
+}
+header p{
+	margin: 13px;
+	float: left;
+	font-size: 12px;
+	color: #737E89;
+}
+header div img{
+	width: 40px;
+	float: left;
+	border-radius: 20px;
+}
+
+aside{
+	height: calc(100% - 100px);
+	width: 200px;
+	float: left;
+	position: relative;
+	z-index:2;
+	color: #848D94;
+	background: #F2F7F8;
+}
+aside p{
+	margin: 20px;
+	color: red;
+}
+aside nav ul{
+	margin: 0 20px;
+	padding: 0;
+	list-style: none;
+}
+aside nav ul li{
+	margin: 10px 0px;
+	padding: 5px 20px 5px 10px;
+	font-size: 12px;
+}
+aside nav ul li#current,li:hover{
+	cursor: pointer;
+	background: red;
+	color: white;
+}
+
+article{
+	height: calc(100% - 100px);
+	width: calc(100% - 200px);
+	float: left;
+	position: relative;
+	z-index:1;
+	background: white;
+	overflow-x: scroll;
+}
+article .name{
+	margin: 20px;
+}
+article #carousel .video{
+	width: calc(33.33% - 25px);
+	float: left;
+	margin-left: 20px;
+	cursor: pointer;
+}
+article #carousel .video:hover{
+	opacity: 0.9;
+}
+article #carousel .video img{
+	height: 100px;
+	width: 100%;
+	float: left;
+	border-radius: 3px;
+}
+article #carousel .video p{
+	font-size: 12px;
+	margin-top: 110px;
+}
+article #carousel .video p:last-child{
+	font-size: 10px;
+	margin-top: -10px;
+	color: #848D94;
+}
+
+@media screen and (max-width: 720px) {
+	header img#menu{
+		display: block;
+		visibility: visible;
+		width: 40px;
+		position: fixed;
+		margin: 30px;
+		cursor: pointer;
+	}
+	header img#logo{
+		margin: 0 auto;
+		display: block;
+		float: none;
+		padding-top: 25px;
+	}
+    header input[type="text"]{
+    	display: none;
+    	visibility: hidden;
+    }
+    header div{
+    	display: none;
+    	visibility: hidden;
+	}
+
+	aside{
+		margin-left: -200px;
+		position: absolute;
+	}
+
+	article{
+		width: 100%;
+	}
+}
+@media screen and (min-width: 720px) {
+	aside{
+		margin-left: 0px;
+		position: relative;
+	}
+}
+</style>
+
+</head>
+<body class="full">
+<div id="wrapping" class="shadow">
+	<header class="shadow">
+		<img id="menu" class="invisible" src="img/icon.png" onclick="menu();">
+		<a href="index.php"><img id="logo" src="img/logo.png"></a>
+		<input type="text" placeholder="Type to search...">
+		<a href="index.php?page=login">
+		<div>
+			<p>Log&Registration</p>
+			<img src="img/avatar.jpg">
+		</div></a>
+	</header>
+
+	<aside id="aside" class="shadow transition">
+		<nav>
+			<p>Explore</p>
+			<ul>
+				<a href="index.php?page=watch&id=2"><li id="current">What to watch</li></a>
+				<a href="index.php?page=recommended"><li>Recommended</li></a>
+				<a href="index.php?page=history"><li>History</li></a>
+				<a href="index.php?page=sub"><li>Subscriptions</li></a>
+			</ul>
+		</nav>
+	</aside>
+
+	<article>
+	<?php 
+	if(isset($_GET[("submit")])){
+		echo $_POST["login"];
+	}
+	if (isset($_GET["page"])){
+		$page = $_GET["page"];
+	}
+		
+		if($page == "login"){ ?>
+			<center>
+				<h1>Registration</h1>
+
+				<form action="login.php?page=index.php" method="post">
+					<input name="login" type="text" placeholder="Login">
+					<input name="password" type="password" placeholder="Password">
+					<input name="submit" type="submit" value="Логин">
+				</form>
+
+			</center>
+
+		<?php }
+
+	 ?>
+	</article>
+
+</div>
+
+<script type="text/javascript">
+	function menu(){
+		if(document.getElementById("aside").style.marginLeft != "0px"){
+			document.getElementById("aside").style.marginLeft = "0px";
+		}else{
+			document.getElementById("aside").style.marginLeft = "-200px";
+		}
+	}
+</script>
+
+</body>
+</html>	

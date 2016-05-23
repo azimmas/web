@@ -1,0 +1,3 @@
+<article>
+	NEW POSTS
+</article>

@@ -1,0 +1,272 @@
+/*Special classes*/
+.main{ 
+		margin-left: 290px;
+		margin-top: 25px;
+		color: #848D94;
+	}
+.artheader{
+	color: #848D94;
+	margin-top: 100px;
+	margin-left: 260px;
+	font-size: 50px;
+
+}
+
+.registration{
+	margin-left: 150px;
+	margin-top: 75px;
+	color: #848D94;
+	
+}
+.login{
+	margin-left: 150px;
+	margin-top: 75px;
+	color: #848D94;
+}
+
+.shadow{
+	-webkit-box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 8px -2px rgba(0,0,0,0.75);
+}
+.transition {
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.full{
+	height: 100%;
+	width: 100%;
+}
+.invisible{
+	display: none;
+	visibility: hidden;
+}
+article .comment{
+	font-family: "Pacifico", cursive;
+	color: #848D94;
+	width: calc(100% - 450px);
+	float: right;
+	margin-right: 50px;
+	margin-top: 10px;
+}
+article .comment2{
+	font-family: "Pacifico", cursive;
+	color: #848D94;
+	width: calc(100% - 450px);
+	float: right;
+	margin-right: 50px;
+	margin-top: 10px;
+
+}
+article .comment3{
+	font-family: "Pacifico", cursive;
+	color: #848D94;
+	width: calc(100% - 450px);
+	float: right;
+	margin-right: 50px;
+	margin-top: 10px;	
+}
+body{
+	margin: 0;
+	font-family: helvetica;
+	background: #CBD3D8;
+	background-color: white;
+	background-image: url("../img/walls.png");
+
+	
+}
+
+#wrapping{
+	height: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+
+
+a:link{
+	color: red;
+	text-decoration: none;
+
+}
+a:visited{
+	color: #848D94;;
+	text-decoration: none;
+}
+a:hover{
+	color: #848D94;;
+}
+a:active{
+	color: #848D94; ;
+}
+
+header{
+	height: 100px;
+	width: 100%;
+	background: white;
+	z-index: 3;
+	position: relative;
+
+}
+header img#logo{
+	height: 65px;
+	margin: 25px 0 0 25px;
+	float: left;	
+	cursor: pointer;
+}
+
+header input[type="text"]{
+	width: 200px;
+	padding: 15px 30px;
+	margin: 30px 0 0 105px;
+	float: left;
+	background: #F2F7F8;
+	border: 0;
+	outline: 0;
+	color: #999999;
+}
+header div{
+	float: right;
+	margin: 33px 25px 0 0;
+}
+header p{
+	margin: 18px;
+	float: left;
+	font-size: 14px;
+	color:black;
+	font-family:"Kaushan Script", cursive;
+	font-size: 15px;
+
+}
+header div img{
+	width: 25px;
+	float: left;
+	border-radius: 20px;
+	cursor: pointer;
+
+}
+aside{
+	height: calc(100% - 100px);
+	width: 200px;
+	float: left;
+	position: relative;
+	z-index:2;
+	color: #848D94;
+	background-color: white;
+}
+aside p{
+	margin: 20px;
+	color: #808080;
+}
+aside nav ul{
+	margin: 0 20px;
+	padding: 0;
+	list-style: none;
+}
+aside nav ul li{
+	margin: 10px 0px;
+	padding: 5px 20px 5px 10px;
+	font-size: 12px;
+	font-family:"Pacifico", cursive;
+	font-size: 13px;
+}
+aside nav ul li#current,li:hover{
+	cursor: pointer;
+	background: #B0E0E6;
+	color: white;
+	font-family:"Pacifico", cursive;
+}
+
+article{
+	height: calc(100% - 100px);
+	width: calc(100% - 200px);
+	float: left;
+	position: relative;
+	z-index:1;
+	background: white;
+	overflow-x: scroll;
+	background-color: white;
+	margin-top: 20px;
+	margin: 0;
+}
+
+article #login {
+	background-image: url("../img/walls.png");
+}
+article #art.art1{
+	height: 170px;
+	width: 100%;
+	float: left;
+	border-radius: 3px;
+}
+
+article #list .video{
+	width: calc(33.33% - 25px);
+	float: left;
+	margin-left: 20px;
+	cursor: pointer;
+}
+article #list .video:hover{
+	opacity:0.8;
+}
+article #list .video img{
+	height: 170px;
+	width: 100%;
+	float: left;
+	
+	border-radius: 3px;
+} ?>
+article #list .video p{
+	font-size: 12px;
+	margin-top: 110px;
+	font-family: "Pacifico", cursive;
+}
+article #list .video p:last-child{
+	font-size: 10px;
+	margin-top: -10px;
+	color: #848D94;
+}
+
+@media screen and (max-width: 720px) {
+	header img#menu{
+		display: block;
+		visibility: visible;
+		width: 40px;
+		position: fixed;
+		margin: 30px;
+		cursor: pointer;
+	}
+	header img#logo{
+		margin: 0 auto;
+		display: block;
+		float: none;
+		padding-top: 25px;
+	}
+	
+    header input[type="text"]{
+    	display: none;
+    	visibility: hidden;
+    }
+    header div{
+    	display: none;
+    	visibility: hidden;
+	}
+
+	aside{
+		margin-left: -200px;
+		position: absolute;
+	}
+
+	article{
+		width: 100%;
+	}
+
+}
+@media screen and (min-width: 720px) {
+	aside{
+		margin-left: 0px;
+		position: relative;
+	}
+}
